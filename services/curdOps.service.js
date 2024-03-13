@@ -53,14 +53,14 @@ const UpdateCategoryDataService = (id, data, res) => {
 
   let categoryData = Category.findOne({ _id: id });
 
-  if (categoryData) {
+  if (!categoryData) {
     res.status(400).json({
       status: false,
       message: "This category name is already available",
     });
   }
   categoryData.update({
-    name: Category_name,
+    name: category_name,
   });
 
   categoryData.save();
@@ -76,7 +76,7 @@ const DeleteCategoryDataService = (id, res) => {
 
   let categoryData = Category.findOne({ _id: id });
 
-  if (categoryData) {
+  if (!categoryData) {
     res.status(400).json({
       status: false,
       message: "This category name is already available",
