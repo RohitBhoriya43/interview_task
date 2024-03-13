@@ -3,6 +3,7 @@ let {
   createdataController,
   deletedataController,
   updatedataController,
+  getdataController,
 } = require("../controllers/crudOps.controllers");
 const express = require("express");
 
