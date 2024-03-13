@@ -7,8 +7,8 @@ const app = express();
 
 const connectdb = () => {
   mongoose
-    .createConnection(
-      "mongodb+srv://Rohit_bhoriya:Rohit@43@rohitbhoriya.suhjp.mongodb.net/Category?retryWrites=true&w=majority&appName=Rohitbhoriya",
+    .connect(
+      "mongodb+srv://Rohit_bhoriya:Uz2rYLEQtzmJs3xh@rohitbhoriya.suhjp.mongodb.net/Category?retryWrites=true&w=majority&appName=Rohitbhoriya",
       {}
     )
     .then((conn) => {
